@@ -35,13 +35,13 @@ def random_pet_breed
   ["dog", "cat", "reptile", "rabbit", "rodent", "rock", "amphibian", "giant robot", "fish"].sample
 end
 
+pets_data = []
 6.times do
-  pet_data = {
+  pets_data << {
     name: FFaker::Name.first_name,
     breed: random_pet_breed,
     # date_of_birth: random_date(-2000.0, -3.0) #between 2000 and 3 days ago
+    owner: owners.sample
   }
-  pet = Pet.create(pet_data)
-  random_owner = owners.sample
-  random_owner.pets << pet
 end
+pets = Pet.create(pets_data)
