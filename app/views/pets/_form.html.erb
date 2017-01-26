@@ -1,2 +1,6 @@
-<h2>pet _form partial</h2>
-<p>Find me in app/views/pets/_form.html.erb</p>
+<h2>Add New Pet</h2>
+<%= form_for @pet, url: {action:"create"} do |f| %>
+  <%= f.text_field :name %>
+  <%= f.text_field :breed %>
+  <%= f.submit "Add" %>
+<% end %>
