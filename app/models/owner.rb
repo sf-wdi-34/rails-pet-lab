@@ -1,6 +1,6 @@
 class Owner < ActiveRecord::Base
   # TODO: add association ot pets
-  
+  has_many :pets
   # TODO: add association to appointments (through pets)
   
   # TODO: add validations
