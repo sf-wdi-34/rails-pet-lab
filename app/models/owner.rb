@@ -1,5 +1,6 @@
 class Owner < ActiveRecord::Base
   has_many :pets
+  has_secure_password
 
   # TODO: add association to appointments (through pets)
 
