@@ -31,6 +31,7 @@ def random_date(min_days_from_now, max_days_from_now)
 end
 
 # Pets
+
 def random_pet_breed
   ["dog", "cat", "reptile", "rabbit", "rodent", "rock", "amphibian", "giant robot", "fish"].sample
 end
@@ -45,3 +46,4 @@ pets_data = []
   }
 end
 pets = Pet.create(pets_data)
+
