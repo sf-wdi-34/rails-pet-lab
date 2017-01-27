@@ -21,6 +21,12 @@
     </div>
   </div>
 
+  <% if current_owner %>
+    Signed in as <%=current_owner.first_name %> | <%= link_to "Logout", '/logout' %>
+  <% else %>
+    <%= link_to "Login", '/login' %> | <%= link_to 'Signup', '/signup' %>
+  <% end %>
+
   <!-- application javascript file -->
   <%= javascript_include_tag :application %>
 </body>

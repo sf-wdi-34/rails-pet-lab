@@ -1,8 +1,9 @@
 class Owner < ActiveRecord::Base
-  # TODO: add association ot pets
-  
+  has_many :pets
+  has_secure_password
+
   # TODO: add association to appointments (through pets)
-  
+
   # TODO: add validations
 
   before_save :normalize_phone_number
